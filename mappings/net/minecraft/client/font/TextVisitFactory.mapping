@@ -3,14 +3,14 @@ CLASS net/minecraft/class_5223 net/minecraft/client/font/TextVisitFactory
 	COMMENT code points and formatting codes.
 	FIELD field_24215 VISIT_TERMINATED Ljava/util/Optional;
 	METHOD method_27471 validateSurrogates (Ljava/lang/String;)Ljava/lang/String;
-		COMMENT Returns a new string that has all surrogate characters within validated
-		COMMENT from an original string.
+		COMMENT {@return a new string that has all surrogate characters within}
+		COMMENT The characters are validated from an original string {@code text}.
 		ARG 0 text
 			COMMENT the original string
 	METHOD method_27472 visitFormatted (Ljava/lang/String;ILnet/minecraft/class_2583;Lnet/minecraft/class_5224;)Z
 		COMMENT Visits the code points of a string, applying the formatting codes within.
 		COMMENT
-		COMMENT <p>The visit is in forward direction.</p>
+		COMMENT <p>The visit is in forward direction.
 		COMMENT
 		COMMENT @return {@code true} if the full string was visited, or {@code false} indicating
 		COMMENT the {@code visitor} terminated half-way
@@ -24,7 +24,7 @@ CLASS net/minecraft/class_5223 net/minecraft/client/font/TextVisitFactory
 	METHOD method_27473 visitFormatted (Ljava/lang/String;ILnet/minecraft/class_2583;Lnet/minecraft/class_2583;Lnet/minecraft/class_5224;)Z
 		COMMENT Visits the code points of a string, applying the formatting codes within.
 		COMMENT
-		COMMENT <p>The visit is in forward direction.</p>
+		COMMENT <p>The visit is in forward direction.
 		COMMENT
 		COMMENT @return {@code true} if the full string was visited, or {@code false} indicating
 		COMMENT the {@code visitor} terminated half-way
@@ -53,11 +53,11 @@ CLASS net/minecraft/class_5223 net/minecraft/client/font/TextVisitFactory
 		COMMENT Visits the code points for every literal string and the formatting codes
 		COMMENT supplied by the renderable.
 		COMMENT
-		COMMENT <p>The visit is in forward direction.</p>
+		COMMENT <p>The visit is in forward direction.
 		COMMENT
 		COMMENT @return {@code true} if the full string was visited, or {@code false} indicating
 		COMMENT the {@code visitor} terminated half-way
-		COMMENT @see StringRenderable#visit(StringRenderable.StyledVisitor, Style)
+		COMMENT @see StringVisitable#visit(StringVisitable.StyledVisitor, Style)
 		ARG 0 text
 		ARG 1 style
 		ARG 2 visitor
@@ -80,7 +80,7 @@ CLASS net/minecraft/class_5223 net/minecraft/client/font/TextVisitFactory
 	METHOD method_27479 visitFormatted (Ljava/lang/String;Lnet/minecraft/class_2583;Lnet/minecraft/class_5224;)Z
 		COMMENT Visits the code points of a string, applying the formatting codes within.
 		COMMENT
-		COMMENT <p>The visit is in forward direction.</p>
+		COMMENT <p>The visit is in forward direction.
 		COMMENT
 		COMMENT @return {@code true} if the full string was visited, or {@code false} indicating
 		COMMENT the {@code visitor} terminated half-way
@@ -90,3 +90,5 @@ CLASS net/minecraft/class_5223 net/minecraft/client/font/TextVisitFactory
 			COMMENT the style of the string
 		ARG 2 visitor
 			COMMENT the visitor
+	METHOD method_31402 removeFormattingCodes (Lnet/minecraft/class_5348;)Ljava/lang/String;
+		ARG 0 text

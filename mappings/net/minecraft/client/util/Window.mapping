@@ -42,6 +42,17 @@ CLASS net/minecraft/class_1041 net/minecraft/client/util/Window
 	METHOD method_22092 getRefreshRate ()I
 	METHOD method_22093 shouldClose ()Z
 	METHOD method_24286 setTitle (Ljava/lang/String;)V
+		ARG 1 title
+	METHOD method_30132 onCursorEnterChanged (JZ)V
+		ARG 1 window
+		ARG 3 entered
+	METHOD method_35642 setFramebufferWidth (I)V
+		ARG 1 framebufferWidth
+	METHOD method_35643 setFramebufferHeight (I)V
+		ARG 1 framebufferHeight
+	METHOD method_36813 setWindowedSize (II)V
+		ARG 1 width
+		ARG 2 height
 	METHOD method_4474 setPhase (Ljava/lang/String;)V
 		ARG 1 phase
 	METHOD method_4475 applyVideoMode ()V

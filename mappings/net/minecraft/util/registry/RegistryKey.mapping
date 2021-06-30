@@ -25,7 +25,7 @@ CLASS net/minecraft/class_5321 net/minecraft/util/registry/RegistryKey
 		COMMENT value.
 		COMMENT
 		COMMENT <p>You can call it like {@code RegistryKey.of(Registry.ITEM_KEY, new Identifier("iron_ingot"))}
-		COMMENT to create a registry key for iron ingot.</p>
+		COMMENT to create a registry key for iron ingot.
 		COMMENT
 		COMMENT @param <T> the type of the value
 		ARG 0 registry
@@ -37,7 +37,7 @@ CLASS net/minecraft/class_5321 net/minecraft/util/registry/RegistryKey
 		COMMENT all registries) with an identifier for the registry.
 		COMMENT
 		COMMENT <p>You can call it like {@code RegistryKey.of(new Identifier("block"))}
-		COMMENT to create a registry key for the block registry.</p>
+		COMMENT to create a registry key for the block registry.
 		COMMENT
 		COMMENT @param <T> the element type of the registry
 		ARG 0 registry
@@ -45,6 +45,8 @@ CLASS net/minecraft/class_5321 net/minecraft/util/registry/RegistryKey
 	METHOD method_29181 of (Lnet/minecraft/class_2960;Lnet/minecraft/class_2960;)Lnet/minecraft/class_5321;
 		ARG 0 registry
 		ARG 1 value
+	METHOD method_29183 (Lnet/minecraft/class_5321;Lnet/minecraft/class_2960;)Lnet/minecraft/class_5321;
+		ARG 1 id
 	METHOD method_31163 isOf (Lnet/minecraft/class_5321;)Z
 		COMMENT Returns whether this registry key belongs to the given registry (according to its type, not whether the registry actually contains this key).
 		ARG 1 registry

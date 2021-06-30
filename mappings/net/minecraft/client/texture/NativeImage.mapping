@@ -52,6 +52,26 @@ CLASS net/minecraft/class_1011 net/minecraft/client/texture/NativeImage
 	METHOD method_24035 getBlue (I)I
 		ARG 0 color
 	METHOD method_24036 getBytes ()[B
+	METHOD method_35621 setPixelLuminance (IIB)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 luminance
+	METHOD method_35623 getRed (II)B
+		ARG 1 x
+		ARG 2 y
+	METHOD method_35624 blendPixel (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 color
+	METHOD method_35625 getGreen (II)B
+		ARG 1 x
+		ARG 2 y
+	METHOD method_35626 getBlue (II)B
+		ARG 1 x
+		ARG 2 y
+	METHOD method_36559 isOutOfBounds (II)Z
+		ARG 1 x
+		ARG 2 y
 	METHOD method_4300 resizeSubRectTo (IIIILnet/minecraft/class_1011;)V
 		ARG 1 x
 		ARG 2 y
@@ -65,6 +85,7 @@ CLASS net/minecraft/class_1011 net/minecraft/client/texture/NativeImage
 		ARG 4 close
 	METHOD method_4302 untrack ()V
 	METHOD method_4303 read (Lnet/minecraft/class_1011$class_1012;Ljava/nio/ByteBuffer;)Lnet/minecraft/class_1011;
+		ARG 0 format
 	METHOD method_4304 copyRect (IIIIIIZZ)V
 		ARG 1 x
 		ARG 2 y
@@ -88,6 +109,7 @@ CLASS net/minecraft/class_1011 net/minecraft/client/texture/NativeImage
 		ARG 1 mipmap
 	METHOD method_4309 read (Ljava/io/InputStream;)Lnet/minecraft/class_1011;
 	METHOD method_4310 read (Lnet/minecraft/class_1011$class_1012;Ljava/io/InputStream;)Lnet/minecraft/class_1011;
+		ARG 0 format
 	METHOD method_4311 getPixelOpacity (II)B
 		ARG 1 x
 		ARG 2 y
@@ -101,8 +123,6 @@ CLASS net/minecraft/class_1011 net/minecraft/client/texture/NativeImage
 		ARG 7 height
 		ARG 8 mipmap
 		ARG 9 close
-	METHOD method_4313 setTextureClamp (Z)V
-		ARG 0 clamp
 	METHOD method_4314 writeFile (Ljava/nio/file/Path;)V
 		ARG 1 path
 	METHOD method_4315 getPixelColor (II)I
@@ -130,8 +150,8 @@ CLASS net/minecraft/class_1011 net/minecraft/client/texture/NativeImage
 	METHOD method_4320 checkAllocated ()V
 	METHOD method_4321 uploadInternal (IIIIIIIZZZZ)V
 		ARG 1 level
-		ARG 2 xOffset
-		ARG 3 yOffset
+		ARG 2 offsetX
+		ARG 3 offsetY
 		ARG 4 unpackSkipPixels
 		ARG 5 unpackSkipRows
 		ARG 6 width
@@ -183,6 +203,20 @@ CLASS net/minecraft/class_1011 net/minecraft/client/texture/NativeImage
 			ARG 13 luminanceOffset
 			ARG 14 alphaOffset
 			ARG 15 writeable
+		METHOD method_35628 hasRed ()Z
+		METHOD method_35629 hasGreen ()Z
+		METHOD method_35630 hasBlue ()Z
+		METHOD method_35631 hasLuminance ()Z
+		METHOD method_35632 getRedOffset ()I
+		METHOD method_35633 getGreenOffset ()I
+		METHOD method_35634 getBlueOffset ()I
+		METHOD method_35635 getLuminanceChannelOffset ()I
+		METHOD method_35636 hasRedChannel ()Z
+		METHOD method_35637 hasGreenChannel ()Z
+		METHOD method_35638 hasBlueChannel ()Z
+		METHOD method_35639 getRedOrLuminanceOffset ()I
+		METHOD method_35640 getGreenOrLuminanceOffset ()I
+		METHOD method_35641 getBlueOrLuminanceOffset ()I
 		METHOD method_4329 hasAlphaChannel ()Z
 		METHOD method_4330 getOpacityOffset ()I
 		METHOD method_4332 getAlphaChannelOffset ()I
@@ -204,8 +238,6 @@ CLASS net/minecraft/class_1011 net/minecraft/client/texture/NativeImage
 	CLASS class_1014 WriteCallback
 		FIELD field_5018 channel Ljava/nio/channels/WritableByteChannel;
 		FIELD field_5019 exception Ljava/io/IOException;
-		METHOD <init> (Ljava/nio/channels/WritableByteChannel;)V
-			ARG 1 channel
 		METHOD invoke (JJI)V
 			ARG 1 context
 			ARG 3 data

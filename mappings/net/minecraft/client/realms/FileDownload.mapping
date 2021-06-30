@@ -45,7 +45,7 @@ CLASS net/minecraft/class_4333 net/minecraft/client/realms/FileDownload
 		METHOD <init> (Lnet/minecraft/class_4333;Ljava/lang/String;Ljava/io/File;Lnet/minecraft/class_32;Lnet/minecraft/class_4392$class_4393;)V
 			ARG 2 worldName
 			ARG 3 tempFile
-			ARG 4 storage
+			ARG 4 levelStorageSource
 			ARG 5 downloadStatus
 		METHOD actionPerformed (Ljava/awt/event/ActionEvent;)V
 			ARG 1 e

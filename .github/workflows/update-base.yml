@@ -1,0 +1,15 @@
+name: Update Base Branch
+
+on:
+  pull_request_target:
+    types: [ labeled ]
+
+jobs:
+  update:
+    if: ${{ github.event.label.name == 'update-base' }}
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: modmuss50/fabric-action-scripts@v1
+        with:
+          context: yarn-update-base
+

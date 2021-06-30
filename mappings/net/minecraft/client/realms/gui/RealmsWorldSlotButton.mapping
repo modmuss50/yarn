@@ -1,6 +1,6 @@
 CLASS net/minecraft/class_4367 net/minecraft/client/realms/gui/RealmsWorldSlotButton
 	FIELD field_19672 serverDataProvider Ljava/util/function/Supplier;
-	FIELD field_19673 toolTipSetter Ljava/util/function/Consumer;
+	FIELD field_19673 tooltipSetter Ljava/util/function/Consumer;
 	FIELD field_19675 slotIndex I
 	FIELD field_19676 animTick I
 	FIELD field_19677 state Lnet/minecraft/class_4367$class_4370;
@@ -9,13 +9,16 @@ CLASS net/minecraft/class_4367 net/minecraft/client/realms/gui/RealmsWorldSlotBu
 	FIELD field_22683 PANORAMA_0 Lnet/minecraft/class_2960;
 	FIELD field_22684 PANORAMA_2 Lnet/minecraft/class_2960;
 	FIELD field_22685 PANORAMA_3 Lnet/minecraft/class_2960;
+	FIELD field_26468 ACTIVE_TOOLTIP Lnet/minecraft/class_2561;
+	FIELD field_26469 MINIGAME_TOOLTIP Lnet/minecraft/class_2561;
+	FIELD field_26470 TOOLTIP Lnet/minecraft/class_2561;
 	METHOD <init> (IIIILjava/util/function/Supplier;Ljava/util/function/Consumer;ILnet/minecraft/class_4185$class_4241;)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 width
 		ARG 4 height
 		ARG 5 serverDataProvider
-		ARG 6 toolTipSetter
+		ARG 6 tooltipSetter
 		ARG 7 id
 		ARG 8 action
 	METHOD method_21107 drawSlotFrame (Lnet/minecraft/class_4587;IIIIZLjava/lang/String;IJLjava/lang/String;ZZLnet/minecraft/class_4367$class_4368;Lnet/minecraft/class_2561;)V
@@ -24,8 +27,26 @@ CLASS net/minecraft/class_4367 net/minecraft/client/realms/gui/RealmsWorldSlotBu
 		ARG 3 y
 		ARG 4 mouseX
 		ARG 5 mouseY
-		ARG 7 text
+		ARG 6 active
+		ARG 7 slotName
+		ARG 8 slotIndex
+		ARG 9 imageId
+		ARG 11 image
+		ARG 12 empty
+		ARG 13 minigame
+		ARG 14 action
+		ARG 15 actionPrompt
 	METHOD method_25099 getState ()Lnet/minecraft/class_4367$class_4370;
+	METHOD method_27454 getActionPromptAndMessage (Lnet/minecraft/class_4877;Ljava/lang/String;ZZLnet/minecraft/class_4367$class_4368;)Lcom/mojang/datafixers/util/Pair;
+		ARG 1 server
+		ARG 2 text
+		ARG 3 empty
+		ARG 4 minigame
+		ARG 5 action
+	METHOD method_27455 getAction (Lnet/minecraft/class_4877;ZZ)Lnet/minecraft/class_4367$class_4368;
+		ARG 0 server
+		ARG 1 active
+		ARG 2 minigame
 	CLASS class_4368 Action
 		FIELD field_19678 NOTHING Lnet/minecraft/class_4367$class_4368;
 		FIELD field_19679 SWITCH_SLOT Lnet/minecraft/class_4367$class_4368;

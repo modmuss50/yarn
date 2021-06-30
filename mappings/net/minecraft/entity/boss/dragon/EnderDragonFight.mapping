@@ -17,17 +17,23 @@ CLASS net/minecraft/class_2881 net/minecraft/entity/boss/dragon/EnderDragonFight
 	FIELD field_13120 dragonSpawnState Lnet/minecraft/class_2876;
 	FIELD field_13121 gateways Ljava/util/List;
 	FIELD field_13122 playerUpdateTimer I
+	FIELD field_31443 CHECK_DRAGON_SEEN_INTERVAL I
+	FIELD field_31444 CRYSTAL_COUNTING_INTERVAL I
 	METHOD <init> (Lnet/minecraft/class_3218;JLnet/minecraft/class_2487;)V
 		ARG 1 world
+		ARG 2 gatewaysSeed
+		ARG 4 nbt
 	METHOD method_12514 worldContainsEndPortal ()Z
 	METHOD method_12515 convertFromLegacy ()V
 	METHOD method_12516 generateEndGateway (Lnet/minecraft/class_2338;)V
+		ARG 1 pos
 	METHOD method_12517 getAliveEndCrystals ()I
 	METHOD method_12518 generateEndPortal (Z)V
 		ARG 1 previouslyKilled
 	METHOD method_12519 generateNewEndGateway ()V
 	METHOD method_12520 updatePlayers ()V
 	METHOD method_12521 setSpawnState (Lnet/minecraft/class_2876;)V
+		ARG 1 spawnState
 	METHOD method_12522 respawnDragon ()V
 	METHOD method_12523 createDragon ()Lnet/minecraft/class_1510;
 	METHOD method_12524 resetEndCrystals ()V
@@ -39,7 +45,7 @@ CLASS net/minecraft/class_2881 net/minecraft/entity/boss/dragon/EnderDragonFight
 		ARG 1 dragon
 	METHOD method_12529 respawnDragon (Ljava/util/List;)V
 		ARG 1 crystals
-	METHOD method_12530 toTag ()Lnet/minecraft/class_2487;
+	METHOD method_12530 toNbt ()Lnet/minecraft/class_2487;
 	METHOD method_12531 findEndPortal ()Lnet/minecraft/class_2700$class_2702;
 	METHOD method_12532 updateFight (Lnet/minecraft/class_1510;)V
 		ARG 1 dragon

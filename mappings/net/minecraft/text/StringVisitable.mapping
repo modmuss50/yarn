@@ -40,6 +40,8 @@ CLASS net/minecraft/class_5348 net/minecraft/text/StringVisitable
 		COMMENT Concats multiple string visitables by the order they appear in the array.
 		ARG 0 visitables
 			COMMENT an array or varargs of visitables
+	METHOD method_30067 (Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/util/Optional;
+		ARG 1 string
 	CLASS class_5245 Visitor
 		COMMENT A visitor for string content.
 		METHOD accept (Ljava/lang/String;)Ljava/util/Optional;
@@ -47,7 +49,7 @@ CLASS net/minecraft/class_5348 net/minecraft/text/StringVisitable
 			COMMENT
 			COMMENT <p>When a {@link Optional#isPresent() present optional} is returned,
 			COMMENT the visit is terminated before visiting all text. Can return {@link
-			COMMENT StringRenderable#TERMINATE_VISIT} for convenience.</p>
+			COMMENT StringVisitable#TERMINATE_VISIT} for convenience.
 			COMMENT
 			COMMENT @return {@code Optional.empty()} to continue, a non-empty result to terminate
 			ARG 1 asString
@@ -59,11 +61,11 @@ CLASS net/minecraft/class_5348 net/minecraft/text/StringVisitable
 			COMMENT
 			COMMENT <p>A contextual style is obtained by calling {@link Style#withParent(Style)}
 			COMMENT on the current's text style, passing the previous contextual style or
-			COMMENT the starting style if it is the beginning of a visit.</p>
+			COMMENT the starting style if it is the beginning of a visit.
 			COMMENT
 			COMMENT <p>When a {@link Optional#isPresent() present optional} is returned,
 			COMMENT the visit is terminated before visiting all text. Can return {@link
-			COMMENT StringRenderable#TERMINATE_VISIT} for convenience.</p>
+			COMMENT StringVisitable#TERMINATE_VISIT} for convenience.
 			COMMENT
 			COMMENT @return {@code Optional.empty()} to continue, a non-empty result to terminate
 			ARG 1 style

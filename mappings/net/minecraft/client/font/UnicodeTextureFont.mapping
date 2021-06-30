@@ -24,6 +24,8 @@ CLASS net/minecraft/class_391 net/minecraft/client/font/UnicodeTextureFont
 			ARG 2 template
 		METHOD method_2046 fromJson (Lcom/google/gson/JsonObject;)Lnet/minecraft/class_389;
 			ARG 0 json
+		METHOD method_37431 getLegacyUnicodeTemplate (Lcom/google/gson/JsonObject;)Ljava/lang/String;
+			ARG 0 json
 	CLASS class_393 UnicodeTextureGlyph
 		FIELD field_2306 unpackSkipRows I
 		FIELD field_2307 unpackSkipPixels I
@@ -31,8 +33,8 @@ CLASS net/minecraft/class_391 net/minecraft/client/font/UnicodeTextureFont
 		FIELD field_2309 width I
 		FIELD field_2310 image Lnet/minecraft/class_1011;
 		METHOD <init> (IIIILnet/minecraft/class_1011;)V
-			ARG 1 x
-			ARG 2 y
+			ARG 1 unpackSkipPixels
+			ARG 2 unpackSkipRows
 			ARG 3 width
 			ARG 4 height
 			ARG 5 image
