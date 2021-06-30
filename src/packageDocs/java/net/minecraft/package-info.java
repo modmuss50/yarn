@@ -4,7 +4,7 @@
 
 /**
  * The base package for all Minecraft classes. All Minecraft classes belong to this package
- * in their intermediary names.
+ * in their intermediary names. Test!
  *
  * <p>Unmapped classes go into this package by default. This package additionally contains
  * {@link Bootstrap}, {@link SharedConstants}, and {@link MinecraftVersion} classes.
